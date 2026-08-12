@@ -1,19 +1,49 @@
 import React from 'react'
-import myPhoto from '../../../assets/myPhoto.png'
+import Me from '../../../assets/Me.png'
+import Github from '../../../assets/Github.png'
+import { Mail,Phone,MoveDown,CodeXml } from 'lucide-react';
+
+
 
 const Intro = () => {
   return (
     <div >
-     <div className='flex justify-between p-4 gap-4'>
-
-      <div className='p-4 flex'>
-        <img src={myPhoto} className="w-64 h-64 object-cover rounded-full"/>
-        <h1 className='py-8 px-10 text-3xl font-bold'>Nontapan Boontrakarn</h1>
+    {/* กล่องแบ่งแยก ช้าย ขวา */}
+     <div className='flex justify-between p-4 gap-2'> 
+      {/* เนื้อหาด้านซ้าย */}
+      <div className='px-4 py-2 flex'> 
+        <img src={Me} className="object-cover rounded-full bg-blue-500 "/>
+        
       </div>
 
-      <div className='border'> 
-        <p>เนื้อหาด้านขวา</p>
+      {/* เนื้อหาด้านขวา */}
+      <div className='flex flex-col gap-5 flex-1 px-20 pt-12 '> 
+        <h1 className='text-6xl font-bold'>Nontapan Boontrkarn</h1>
+        <h1 className='text-3xl font-medium'>Full-Stak Developer Internship</h1>
+        
+        <div className="flex gap-10">
+           <p className='text-xl flex gap-4'><Mail/> Gmail: n9ntapan@gmail.com</p>
+           <p className='text-xl flex gap-4'><Phone />Phone: 0889509069</p>
+           <p className='text-xl flex gap-2 items-center'><CodeXml />Github: github.com/OVATUS</p>
+        </div>
+
+        <div>
+          <p className='bg-blue-100 shadow-2xs p-3'>
+            A 4th-year Data Science and Software Innovation student specializing 
+            in full-stack web development with Django, and Tailwind CSS. Currently 
+            seeking an internship opportunity to build practical applications and
+            gain real-world industry experience.
+            </p>
+        </div>
+
+        <div className='flex justify-center mt-15'>
+          <button className='flex items-center justify-center border rounded-3xl px-6 py-2 text-2xl bg-blue-800 text-white hover:bg-blue-600 hover:text-white'>
+            <MoveDown />Read More
+          </button>
+        </div>
+
       </div>
+
      </div>
     </div>
   )
